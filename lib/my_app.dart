@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mykart/utils/theme/theme.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -7,12 +8,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-
-        useMaterial3: true,
-
-        colorScheme: .fromSeed(seedColor: Colors.deepPurple),
-      ),
+      theme: UAppTheme.lightTheme,
+      darkTheme: UAppTheme.darkTheme,
       home: const Center(),
     );
   }
