@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:mykart/utils/constant/colors.dart';
+import 'package:mykart/utils/theme/widgets_theme/appbar_theme.dart';
+import 'package:mykart/utils/theme/widgets_theme/checkbox_theme.dart';
+import 'package:mykart/utils/theme/widgets_theme/chip_theme.dart';
 import 'package:mykart/utils/theme/widgets_theme/text_theme.dart';
 
 class UAppTheme{
@@ -12,10 +15,10 @@ class UAppTheme{
     primaryColor: UColors.primary,
     disabledColor: UColors.gray,
     textTheme: UTextTheme.lightTextTheme,
-    chipTheme: ,
+    chipTheme: UChipTheme.lightChipTheme ,
     scaffoldBackgroundColor: UColors.white ,
-    appBarTheme: ,
-    checkboxTheme: ,
+    appBarTheme: UAppBarTheme.lightAppBarTheme,
+    checkboxTheme: UCheckBoxTheme.lightCheckBoxTheme,
     bottomSheetTheme: ,
     elevatedButtonTheme: ,
     outlinedButtonTheme: ,
@@ -29,10 +32,10 @@ class UAppTheme{
     primaryColor: UColors.primary,
     disabledColor: UColors.gray,
     textTheme: UTextTheme.darkTextTheme,
-    chipTheme: ,
+    chipTheme: UChipTheme.darkChipTheme,
     scaffoldBackgroundColor: UColors.dark,
-    appBarTheme: ,
-    checkboxTheme: ,
+    appBarTheme: UAppBarTheme.darkAppBarTheme,
+    checkboxTheme: UCheckBoxTheme.darkCheckBoxTheme,
     bottomSheetTheme: ,
     elevatedButtonTheme: ,
     outlinedButtonTheme: ,
