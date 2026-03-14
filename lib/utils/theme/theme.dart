@@ -9,25 +9,25 @@ import 'package:mykart/utils/theme/widgets_theme/elevated_button_theme.dart';
 import 'package:mykart/utils/theme/widgets_theme/text_field_theme.dart';
 import 'package:mykart/utils/theme/widgets_theme/text_theme.dart';
 
-class UAppTheme{
-   // private constructor.
+class UAppTheme {
+  // private constructor.
   UAppTheme._();
+
   static ThemeData lightTheme = ThemeData(
     useMaterial3: true,
-    fontFamily: '',
+    fontFamily: 'Nunito',
     brightness: Brightness.light,
     primaryColor: UColors.primary,
     disabledColor: UColors.grey,
     textTheme: UTextTheme.lightTextTheme,
-    chipTheme: UChipTheme.lightChipTheme ,
-    scaffoldBackgroundColor: UColors.white ,
+    chipTheme: UChipTheme.lightChipTheme,
+    scaffoldBackgroundColor: UColors.white,
     appBarTheme: UAppBarTheme.lightAppBarTheme,
     checkboxTheme: UCheckBoxTheme.lightCheckBoxTheme,
     bottomSheetTheme: UBottomSheetTheme.lightBottomSheetTheme,
     elevatedButtonTheme: UElevatedButtonTheme.lightElevatedButtonTheme,
     outlinedButtonTheme: UOutlinedButtonTheme.lightOutLinedButtonTheme,
     inputDecorationTheme: UTextFormFieldTheme.lightInputDecorationTheme,
-
   );
   static ThemeData darkTheme = ThemeData(
     useMaterial3: true,
@@ -42,10 +42,7 @@ class UAppTheme{
     checkboxTheme: UCheckBoxTheme.darkCheckBoxTheme,
     bottomSheetTheme: UBottomSheetTheme.darkBottomSheetTheme,
     elevatedButtonTheme: UElevatedButtonTheme.darkElevatedButtonTheme,
-    outlinedButtonTheme:UOutlinedButtonTheme.darkOutLinedButtonTheme ,
+    outlinedButtonTheme: UOutlinedButtonTheme.darkOutLinedButtonTheme,
     inputDecorationTheme: UTextFormFieldTheme.darkInputDecorationTheme,
-
-
   );
-
 }
