@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import 'package:mykart/features/authentication/screens/onboarding/widgets/onboarding_page.dart';
 import 'package:mykart/utils/constant/images.dart';
 import 'package:mykart/utils/constant/sizes.dart';
 import 'package:mykart/utils/constant/texts.dart';
+import 'package:mykart/utils/helpers/device_helper.dart';
 
 class OnboardingScreen extends StatelessWidget {
   const OnboardingScreen({super.key});
@@ -14,25 +16,21 @@ class OnboardingScreen extends StatelessWidget {
         children: [
           PageView(
             children: [
-              Padding(
-                padding: const EdgeInsets.only(right: USizes.defaultSpace, left: USizes.defaultSpace,top:
-                ),
-                child: Column(
-                  children: [
-                    Lottie.asset(UImages.onboarding1Animation),
-                    Text(
-                      UTexts.onBoardingTitle1,
-                      style: Theme.of(context).textTheme.headlineMedium,
-                    ),
-                    Text(
-                      UTexts.onBoardingSubTitle1,
-                      textAlign: TextAlign.center,
-                    ),
-                  ],
-                ),
+              OnBoardingPage(
+                animation: UImages.onboarding1Animation,
+                title: UTexts.onBoardingTitle1,
+                subtitle: UTexts.onBoardingTitle1,
               ),
-              Lottie.asset(UImages.onboarding2Animation),
-              Lottie.asset(UImages.onboarding3Animation),
+              OnBoardingPage(
+                animation: UImages.onboarding2Animation,
+                title: UTexts.onBoardingTitle2,
+                subtitle: UTexts.onBoardingTitle2,
+              ),
+              OnBoardingPage(
+                animation: UImages.onboarding3Animation,
+                title: UTexts.onBoardingTitle3,
+                subtitle: UTexts.onBoardingTitle3,
+              ),
             ],
           ),
         ],
