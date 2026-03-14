@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mykart/features/authentication/screens/onboarding/onboarding.dart';
 import 'package:mykart/utils/theme/theme.dart';
 
 class MyApp extends StatelessWidget {
@@ -11,7 +12,7 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.system,
       theme: UAppTheme.lightTheme,
       darkTheme: UAppTheme.darkTheme,
-      home: const Center(),
+      home: OnboardingScreen(),
     );
   }
 }

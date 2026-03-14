@@ -7,7 +7,7 @@ void main() {
   final widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
 
   /// Flutter Native Splash
-  FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
+ // FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
 
   runApp(const MyApp());
 }
