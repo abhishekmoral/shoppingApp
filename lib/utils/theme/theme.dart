@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mykart/utils/constant/colors.dart';
-import 'package:mykart/utils/theme/widgets_theme/outlined_Button_theme.dart';
+import 'package:mykart/utils/theme/widgets_theme/outlined_button_theme.dart';
 import 'package:mykart/utils/theme/widgets_theme/appbar_theme.dart';
 import 'package:mykart/utils/theme/widgets_theme/bottom_sheet_theme.dart';
 import 'package:mykart/utils/theme/widgets_theme/checkbox_theme.dart';
