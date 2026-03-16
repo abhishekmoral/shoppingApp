@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:mykart/features/authentication/screens/onboarding/onboarding.dart';
 import 'package:mykart/utils/theme/theme.dart';
 
@@ -7,7 +8,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       title: 'Flutter Demo',
       themeMode: ThemeMode.system,
       theme: UAppTheme.lightTheme,

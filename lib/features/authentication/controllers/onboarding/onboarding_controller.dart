@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:mykart/features/authentication/screens/login/login.dart';
 
 class OnBoardingController extends GetxController {
   static OnBoardingController get instance => Get.find();
@@ -22,6 +23,7 @@ class OnBoardingController extends GetxController {
   /// Update current index and jump to the next page.
   void nextPage() {
     if (currentIndex.value == 2) {
+      Get.offAll(()=> LoginScreen());
       return;
     }
     currentIndex.value++;
