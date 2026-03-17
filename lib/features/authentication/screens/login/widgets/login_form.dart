@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:mykart/features/authentication/screens/signup/signup.dart';
 
 import '../../../../../common/widgets/button/elevated_button.dart';
 import '../../../../../utils/constant/sizes.dart';
 import '../../../../../utils/constant/texts.dart';
+
 class ULoginForm extends StatelessWidget {
-  const ULoginForm({
-    super.key,
-  });
+  const ULoginForm({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +27,7 @@ class ULoginForm extends StatelessWidget {
         /// Password.
         TextFormField(
           decoration: InputDecoration(
-            prefixIcon: Icon(Iconsax.lock),
+            prefixIcon: Icon(Iconsax.password_check),
             labelText: UTexts.password,
             suffixIcon: Icon(Iconsax.eye),
           ),
@@ -45,10 +46,7 @@ class ULoginForm extends StatelessWidget {
             ),
 
             /// forget Password
-            TextButton(
-              onPressed: () {},
-              child: Text(UTexts.forgetPassword),
-            ),
+            TextButton(onPressed: () {}, child: Text(UTexts.forgetPassword)),
           ],
         ),
 
@@ -57,9 +55,12 @@ class ULoginForm extends StatelessWidget {
         SizedBox(height: USizes.spaceBtwItems / 2),
 
         /// Create Account.
-        UElevatedButton(
-          onPressed: () {},
-          child: Text(UTexts.createAccount),
+        SizedBox(
+          width: double.infinity,
+          child: OutlinedButton(
+            onPressed: () => Get.to(() => SignupScreen()),
+            child: const Text(UTexts.createAccount),
+          ),
         ),
       ],
     );

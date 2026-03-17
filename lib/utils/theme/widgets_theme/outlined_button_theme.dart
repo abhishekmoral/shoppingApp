@@ -27,11 +27,11 @@ class UOutlinedButtonTheme {
   static final darkOutLinedButtonTheme = OutlinedButtonThemeData(
     style: OutlinedButton.styleFrom(
       elevation: 0,
-      foregroundColor: UColors.dark,
+      foregroundColor: UColors.white,
       side: const BorderSide(color: UColors.borderPrimary),
       textStyle: const TextStyle(
         fontSize: 16,
-        color: UColors.black,
+        color: UColors.white,
         fontWeight: FontWeight.w600,
       ),
       padding: const EdgeInsets.symmetric(
