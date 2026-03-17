@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:mykart/features/authentication/screens/forget_password/forget_password.dart';
 import 'package:mykart/features/authentication/screens/signup/signup.dart';
 
 import '../../../../../common/widgets/button/elevated_button.dart';
@@ -46,7 +47,10 @@ class ULoginForm extends StatelessWidget {
             ),
 
             /// forget Password
-            TextButton(onPressed: () {}, child: Text(UTexts.forgetPassword)),
+            TextButton(
+              onPressed: () => Get.to(() => ForgetPassword()),
+              child: Text(UTexts.forgetPassword),
+            ),
           ],
         ),
 

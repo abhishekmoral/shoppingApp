@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       themeMode: ThemeMode.system,
       theme: UAppTheme.lightTheme,
+      debugShowCheckedModeBanner: false,
       darkTheme: UAppTheme.darkTheme,
       home: OnboardingScreen(),
     );
