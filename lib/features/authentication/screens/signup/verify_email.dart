@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:mykart/common/Style/padding.dart';
 import 'package:mykart/common/widgets/button/elevated_button.dart';
+import 'package:mykart/common/widgets/screens/success_screen.dart';
 import 'package:mykart/features/authentication/screens/login/login.dart';
 import 'package:mykart/features/authentication/screens/signup/signup.dart';
 import 'package:mykart/utils/constant/images.dart';
@@ -59,8 +60,18 @@ class VerifyEmailScreen extends StatelessWidget {
               ),
               SizedBox(height: USizes.spaceBtwSections),
 
-              /// ---------Done ----------
-              UElevatedButton(onPressed: () {}, child: Text(UTexts.uContinue)),
+              /// ---------Continue ----------
+              UElevatedButton(
+                onPressed: () => Get.to(
+                  () => SuccessScreen(
+                    title: UTexts.accountCreatedTitle,
+                    subTitle: UTexts.accountCreatedSubTitle,
+                    image: UImages.accountCreatedImage,
+                    onTap: () {},
+                  ),
+                ),
+                child: Text(UTexts.uContinue),
+              ),
 
               /// -------Resend Email -------
               SizedBox(
