@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:mykart/features/authentication/screens/signup/verify_email.dart';
 import 'package:mykart/features/authentication/screens/signup/widgets/privacy_policy_check_box.dart';
 
 import '../../../../../common/widgets/button/elevated_button.dart';
@@ -73,7 +75,10 @@ class USignupForm extends StatelessWidget {
         SizedBox(height: USizes.spaceBtwItems),
 
         /// Create Account
-        UElevatedButton(onPressed: () {}, child: Text(UTexts.createAccount)),
+        UElevatedButton(
+          onPressed: () => Get.to(() => VerifyEmailScreen()),
+          child: Text(UTexts.createAccount),
+        ),
       ],
     );
   }

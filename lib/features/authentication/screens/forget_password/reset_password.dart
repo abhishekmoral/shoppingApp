@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart' show Get, GetNavigation;
+import 'package:get/get.dart';
 import 'package:mykart/common/Style/padding.dart';
 import 'package:mykart/common/widgets/button/elevated_button.dart';
 import 'package:mykart/features/authentication/screens/login/login.dart';
