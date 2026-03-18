@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:mykart/features/authentication/screens/forget_password/forget_password.dart';
 import 'package:mykart/features/authentication/screens/signup/signup.dart';
+import 'package:mykart/navigation_menu.dart';
 
 import '../../../../../common/widgets/button/elevated_button.dart';
 import '../../../../../utils/constant/sizes.dart';
@@ -55,7 +56,10 @@ class ULoginForm extends StatelessWidget {
         ),
 
         /// Sign In.
-        UElevatedButton(onPressed: () {}, child: Text(UTexts.signIn)),
+        UElevatedButton(
+          onPressed: () => Get.to(() => NavigationMenu()),
+          child: Text(UTexts.signIn),
+        ),
         SizedBox(height: USizes.spaceBtwItems / 2),
 
         /// Create Account.
