@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import 'package:mykart/common/Style/padding.dart';
 import 'package:mykart/common/widgets/button/elevated_button.dart';
 import 'package:mykart/common/widgets/screens/success_screen.dart';
-import 'package:mykart/features/authentication/screens/login/login.dart';
+
 import 'package:mykart/features/authentication/screens/signup/signup.dart';
 import 'package:mykart/utils/constant/images.dart';
 import 'package:mykart/utils/constant/sizes.dart';

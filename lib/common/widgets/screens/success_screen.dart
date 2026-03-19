@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:mykart/common/Style/padding.dart';
 
-import '../../../utils/constant/images.dart';
 import '../../../utils/constant/sizes.dart';
-import '../../../utils/constant/texts.dart';
+
 import '../../../utils/helpers/device_helper.dart';
 import '../button/elevated_button.dart';
 
