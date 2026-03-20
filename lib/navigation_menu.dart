@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:mykart/features/shop/screens/home/home.dart';
-import 'package:mykart/utils/constant/Colors.dart';
+import 'package:mykart/utils/constant/colors.dart';
 import 'package:mykart/utils/helpers/helper_function.dart';
 
 class NavigationMenu extends StatelessWidget {

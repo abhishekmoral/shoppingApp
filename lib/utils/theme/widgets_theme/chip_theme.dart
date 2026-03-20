@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mykart/utils/constant/Colors.dart';
+import 'package:mykart/utils/constant/colors.dart';
 
 class UChipTheme {
   UChipTheme._();

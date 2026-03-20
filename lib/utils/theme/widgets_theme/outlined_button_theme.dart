@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mykart/utils/constant/Colors.dart';
+import 'package:mykart/utils/constant/colors.dart';
 import 'package:mykart/utils/constant/sizes.dart';
 
 class UOutlinedButtonTheme {
