@@ -2,11 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:mykart/features/shop/screens/home/widgets/home_appbar.dart';
 
 import 'package:mykart/features/shop/screens/home/widgets/primary_header_container.dart';
-import 'package:mykart/utils/constant/colors.dart';
-import 'package:mykart/utils/constant/texts.dart';
 
-import '../../../../common/widgets/appbar/appbar.dart';
-import '../../../../common/widgets/product/cart/cart_counter_icon.dart';
+import 'package:mykart/utils/constant/sizes.dart';
+
+import '../../../../common/widgets/TextFields/search_bar.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -14,16 +13,25 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: UPrimaryHeaderContainer(
-        child: Column(
-          children: [
-            ///------[AppBar]------
-            UHomeAppBar(),
-          ],
-        ),
+      body: Stack(
+        children: [
+          /// ------ Total Height +20;----------
+          SizedBox(height: USizes.homePrimaryHeaderHeight + 20),
+
+          /// ------Primary Header Container -------
+          UPrimaryHeaderContainer(
+            child: Column(
+              children: [
+                /// -------AppBar--------
+                UHomeAppBar(),
+              ],
+            ),
+          ),
+
+          /// -----Search Bar --------
+          USearchBar(),
+        ],
       ),
     );
   }
 }
-
-

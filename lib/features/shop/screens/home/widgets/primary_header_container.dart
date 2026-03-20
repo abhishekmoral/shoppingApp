@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mykart/utils/constant/sizes.dart';
 
 import '../../../../../common/widgets/custom_shape/circular_container.dart';
 
@@ -15,7 +16,7 @@ class UPrimaryHeaderContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return URoundedEdgesContainer(
       child: Container(
-        height: UDeviceHelper.getScreenHeight(context) * 0.4,
+        height: USizes.homePrimaryHeaderHeight,
         color: UColors.primary,
         child: Stack(
           children: [
@@ -24,8 +25,8 @@ class UPrimaryHeaderContainer extends StatelessWidget {
               top: -150,
               right: -160,
               child: UCircularController(
-                height: UDeviceHelper.getScreenHeight(context) * 0.4,
-                width: UDeviceHelper.getScreenHeight(context) * 0.4,
+                height: USizes.homePrimaryHeaderHeight,
+                width: USizes.homePrimaryHeaderHeight,
                 backgroundColor: UColors.white.withValues(alpha: 0.1),
               ),
             ),
@@ -35,8 +36,8 @@ class UPrimaryHeaderContainer extends StatelessWidget {
               top: 50,
               right: -250,
               child: UCircularController(
-                height: UDeviceHelper.getScreenHeight(context) * 0.4,
-                width: UDeviceHelper.getScreenHeight(context) * 0.4,
+                height: USizes.homePrimaryHeaderHeight,
+                width: USizes.homePrimaryHeaderHeight,
                 backgroundColor: UColors.white.withValues(alpha: 0.1),
               ),
             ),
