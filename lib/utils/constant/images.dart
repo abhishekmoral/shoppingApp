@@ -56,7 +56,7 @@ class UImages {
   static const String shirtIcon =
       'assets/icons/categories/shirt.png'; //------------
   static const String shoesIcon =
-      'assets/icons/categories/shoes.png'; //------------
+      'assets/icons/categories/sports.png'; //------------
   static const String shortsIcon =
       'assets/icons/categories/shorts.png'; //------------
   static const String soccerIcon =

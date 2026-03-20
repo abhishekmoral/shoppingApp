@@ -24,7 +24,7 @@ class UPrimaryHeaderContainer extends StatelessWidget {
             Positioned(
               top: -150,
               right: -160,
-              child: UCircularController(
+              child: UCircularContainer(
                 height: USizes.homePrimaryHeaderHeight,
                 width: USizes.homePrimaryHeaderHeight,
                 backgroundColor: UColors.white.withValues(alpha: 0.1),
@@ -35,7 +35,7 @@ class UPrimaryHeaderContainer extends StatelessWidget {
             Positioned(
               top: 50,
               right: -250,
-              child: UCircularController(
+              child: UCircularContainer(
                 height: USizes.homePrimaryHeaderHeight,
                 width: USizes.homePrimaryHeaderHeight,
                 backgroundColor: UColors.white.withValues(alpha: 0.1),
