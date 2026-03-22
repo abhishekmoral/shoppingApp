@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mykart/utils/constant/images.dart';
-import '../../../../../common/widgets/custom_shape/circular_container.dart';
+
 import '../../../../../common/widgets/image_text/vertical_image_text.dart';
 import '../../../../../utils/constant/Colors.dart';
 import '../../../../../utils/constant/sizes.dart';
@@ -19,7 +19,7 @@ class UHomeCategories extends StatelessWidget {
         ///-------- Section Heading ----
         children: [
           Text(
-            UTexts.popularCategories,
+            UTexts.popularProduct,
             style: Theme.of(
               context,
             ).textTheme.headlineSmall!.apply(color: UColors.white),

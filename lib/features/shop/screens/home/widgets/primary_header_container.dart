@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:mykart/utils/constant/sizes.dart';
-
 import '../../../../../common/widgets/custom_shape/circular_container.dart';
-
 import '../../../../../common/widgets/custom_shape/clipper/rounded_edges_container.dart';
 import '../../../../../utils/constant/colors.dart';
-import '../../../../../utils/helpers/device_helper.dart';
 
 class UPrimaryHeaderContainer extends StatelessWidget {
   const UPrimaryHeaderContainer({super.key, required this.child});

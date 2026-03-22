@@ -6,6 +6,7 @@ import 'package:mykart/common/widgets/button/elevated_button.dart';
 import 'package:mykart/common/widgets/screens/success_screen.dart';
 
 import 'package:mykart/features/authentication/screens/signup/signup.dart';
+import 'package:mykart/features/shop/screens/home/home.dart';
 import 'package:mykart/utils/constant/images.dart';
 import 'package:mykart/utils/constant/sizes.dart';
 import 'package:mykart/utils/constant/texts.dart';
@@ -60,14 +61,14 @@ class VerifyEmailScreen extends StatelessWidget {
               ),
               SizedBox(height: USizes.spaceBtwSections),
 
-              /// ---------Continue ----------
+              /// ---------Continue ---------
               UElevatedButton(
                 onPressed: () => Get.to(
                   () => SuccessScreen(
                     title: UTexts.accountCreatedTitle,
                     subTitle: UTexts.accountCreatedSubTitle,
                     image: UImages.accountCreatedImage,
-                    onTap: () {},
+                    onTap: ()=> Get.to(()=> HomeScreen()),
                   ),
                 ),
                 child: Text(UTexts.uContinue),

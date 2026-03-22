@@ -1,39 +1,86 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:mykart/common/Style/shadow.dart';
+import 'package:mykart/features/shop/controllers/home/home_controller.dart';
 import 'package:mykart/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:mykart/features/shop/screens/home/widgets/home_categories.dart';
 import 'package:mykart/features/shop/screens/home/widgets/primary_header_container.dart';
+import 'package:mykart/features/shop/screens/home/widgets/promo_slider.dart';
+import 'package:mykart/utils/constant/Colors.dart';
+import 'package:mykart/utils/constant/images.dart';
 import 'package:mykart/utils/constant/sizes.dart';
+import 'package:mykart/utils/constant/texts.dart';
 import '../../../../common/widgets/TextFields/search_bar.dart';
+import '../../../../common/widgets/product/product_cards/product_card_vertical.dart';
+import '../../../../common/widgets/texts/section_heading.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(HomeController());
     return Scaffold(
-      body: Stack(
-        children: [
-          /// ------ Total Height +10;----------
-          SizedBox(height: USizes.homePrimaryHeaderHeight + 10),
-
-          /// ------Primary Header Container -------
-          UPrimaryHeaderContainer(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            /// -----Upper Part ------
+            Stack(
               children: [
-                /// -------AppBar--------
-                UHomeAppBar(),
-                SizedBox(height: USizes.spaceBtwSections),
+                /// ------ Total Height +10;----------
+                SizedBox(height: USizes.homePrimaryHeaderHeight + 10),
 
-                /// ----- Home Categories.
-                UHomeCategories(),
+                /// ------Primary Header Container -------
+                UPrimaryHeaderContainer(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      /// -------AppBar--------
+                      UHomeAppBar(),
+                      SizedBox(height: USizes.spaceBtwSections),
+
+                      /// ----- Home Categories.
+                      UHomeCategories(),
+                    ],
+                  ),
+                ),
+
+                /// -----Search Bar --------
+                USearchBar(),
               ],
             ),
-          ),
 
-          /// -----Search Bar --------
-          USearchBar(),
-        ],
+            /// ------Lower Part ------
+            Padding(
+              padding: const EdgeInsets.all(USizes.defaultSpace),
+              child: Column(
+                children: [
+                  /// Banner
+                  UPromoSlider(
+                    banners: [
+                      UImages.homeBanner1,
+                      UImages.homeBanner2,
+                      UImages.homeBanner3,
+                      UImages.homeBanner4,
+                      UImages.homeBanner5,
+                    ],
+                  ),
+                  SizedBox(height: USizes.spaceBtwSections),
+
+                  /// Section Heading.
+                  USectionHeading(
+                    title: UTexts.popularProduct,
+                    onPressed: () {},
+                  ),
+                  SizedBox(height: USizes.spaceBtwItems),
+
+                  /// Vertical Product Card.
+                  UProductCardVertical(),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
