@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mykart/common/Style/shadow.dart';
+import 'package:mykart/common/widgets/product/product_cards/product_card_vertical.dart';
 import 'package:mykart/features/shop/controllers/home/home_controller.dart';
 import 'package:mykart/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:mykart/features/shop/screens/home/widgets/home_categories.dart';
 import 'package:mykart/features/shop/screens/home/widgets/primary_header_container.dart';
 import 'package:mykart/features/shop/screens/home/widgets/promo_slider.dart';
-import 'package:mykart/utils/constant/Colors.dart';
 import 'package:mykart/utils/constant/images.dart';
 import 'package:mykart/utils/constant/sizes.dart';
 import 'package:mykart/utils/constant/texts.dart';
 import '../../../../common/widgets/TextFields/search_bar.dart';
-import '../../../../common/widgets/product/product_cards/product_card_vertical.dart';
+import '../../../../common/widgets/layouts/grid_layout.dart';
 import '../../../../common/widgets/texts/section_heading.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -74,8 +73,11 @@ class HomeScreen extends StatelessWidget {
                   ),
                   SizedBox(height: USizes.spaceBtwItems),
 
-                  /// Vertical Product Card.
-                  UProductCardVertical(),
+                  /// GridView Of Product Cards.
+                  UGridLayOut(
+                    itemCount: 10,
+                    itemBuilder: (context, index) => UProductCardVertical(),
+                  ),
                 ],
               ),
             ),

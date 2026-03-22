@@ -17,63 +17,123 @@ class UProductCardVertical extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final dark = UHelperFunctions.isDarkMode(context);
-    return Container(
-      width: 180,
-      padding: EdgeInsets.all(1),
-      decoration: BoxDecoration(
-        boxShadow: UShadow.verticalProductShadow,
-        borderRadius: BorderRadius.circular(USizes.productImageRadius),
-        color: dark ? UColors.darkGrey : UColors.white,
-      ),
-      child: Column(
-        children: [
-          /// Thumbnail , favourite Button And Discount Tags.
-          URoundedContainer(
-            width: 180,
-            padding: const EdgeInsets.all(USizes.sm),
-            backgroundColor: dark ? UColors.dark : UColors.light,
-            child: Stack(
-              children: [
-                /// Thumbnail,
-                URoundedImage(imageUrl: UImages.productImage1),
+    return GestureDetector(
+      onTap: (){},
+      child: Container(
+        width: 180,
+        padding: EdgeInsets.all(1),
+        decoration: BoxDecoration(
+          boxShadow: UShadow.verticalProductShadow,
+          borderRadius: BorderRadius.circular(USizes.productImageRadius),
+          color: dark ? UColors.darkGrey : UColors.white,
+        ),
+        child: Column(
+          children: [
+            /// Thumbnail , favourite Button And Discount Tags.
+            URoundedContainer(
+              width: 180,
+              padding: const EdgeInsets.all(USizes.sm),
+              backgroundColor: dark ? UColors.dark : UColors.light,
+              child: Stack(
+                children: [
+                  /// Thumbnail,
+                  URoundedImage(imageUrl: UImages.productImage1),
 
-                /// Discount Tag.
-                Positioned(
-                  top: 12.0,
-                  child: URoundedContainer(
-                    radius: USizes.sm,
-                    backgroundColor: UColors.yellow.withValues(alpha: 0.8),
-                    padding: EdgeInsets.symmetric(
-                      horizontal: USizes.sm,
-                      vertical: USizes.xs,
-                    ),
-                    child: Text(
-                      '20%',
-                      style: Theme.of(
-                        context,
-                      ).textTheme.labelLarge!.apply(color: UColors.black),
+                  /// Discount Tag.
+                  Positioned(
+                    top: 12.0,
+                    child: URoundedContainer(
+                      radius: USizes.sm,
+                      backgroundColor: UColors.yellow.withValues(alpha: 0.8),
+                      padding: EdgeInsets.symmetric(
+                        horizontal: USizes.sm,
+                        vertical: USizes.xs,
+                      ),
+                      child: Text(
+                        '20%',
+                        style: Theme.of(
+                          context,
+                        ).textTheme.labelLarge!.apply(color: UColors.black),
+                      ),
                     ),
                   ),
-                ),
 
-                /// Favourite Button.
-                Positioned(
-                  right: 0,
-                  top: 0,
-                  child: UCircularIcon(icon: Iconsax.heart5, color: Colors.red),
-                ),
-              ],
+                  /// Favourite Button.
+                  Positioned(
+                    right: 0,
+                    top: 0,
+                    child: UCircularIcon(
+                      icon: Iconsax.heart5,
+                      color: Colors.red,
+                    ),
+                  ),
+                ],
+              ),
             ),
-          ),
-          SizedBox(height: USizes.spaceBtwItems),
-          Column(
-            children: [
-              UProductTitleText(title: 'Blue Bata Shoes', smallSize: true),
-              SizedBox(height: USizes.spaceBtwItems / 2),
-              Text('Bata', style: Theme.of(context).textTheme.labelMedium),
-            ],
-          ),
-        ],
+            SizedBox(height: USizes.spaceBtwItems),
+
+            /// Detalis.
+            Padding(
+              padding: const EdgeInsets.only(left: USizes.sm),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  /// Product Title.
+                  UProductTitleText(title: 'Blue Bata Shoes', smallSize: true),
+                  SizedBox(height: USizes.spaceBtwItems / 2),
+
+                  /// Product Brand
+                  Row(
+                    children: [
+                      Text(
+                        'Bata',
+                        style: Theme.of(context).textTheme.labelMedium,
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                      SizedBox(width: USizes.xs),
+                      Icon(
+                        Iconsax.verify5,
+                        color: UColors.primary,
+                        size: USizes.iconXs,
+                      ),
+                    ],
+                  ),
+
+                  /// Product Price and add button.
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      /// Product Price
+                      Text(
+                        '\$76',
+                        style: Theme.of(context).textTheme.headlineMedium,
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                      ),
+
+                      /// Add button.
+                      Container(
+                        width: USizes.lg * 1.2,
+                        height: USizes.lg * 1.2,
+                        decoration: BoxDecoration(
+                          color: UColors.primary,
+                          borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(USizes.cardRadiusMd),
+                            bottomRight: Radius.circular(
+                              USizes.productImageRadius,
+                            ),
+                          ),
+                        ),
+                        child: Icon(Iconsax.add, color: UColors.white),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
