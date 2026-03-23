@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:mykart/common/widgets/Icons/Circular_icon.dart';
+import 'package:mykart/common/widgets/Icons/circular_icon.dart';
 import 'package:mykart/common/widgets/custom_shape/rounded_container.dart';
 import 'package:mykart/common/widgets/images/rounded_images.dart';
 import 'package:mykart/utils/constant/Colors.dart';
@@ -9,6 +9,7 @@ import 'package:mykart/utils/helpers/helper_function.dart';
 
 import '../../../../utils/constant/sizes.dart';
 import '../../../Style/shadow.dart';
+import '../../texts/product_price_text.dart';
 import '../../texts/product_title_text.dart';
 
 class UProductCardVertical extends StatelessWidget {
@@ -18,7 +19,7 @@ class UProductCardVertical extends StatelessWidget {
   Widget build(BuildContext context) {
     final dark = UHelperFunctions.isDarkMode(context);
     return GestureDetector(
-      onTap: (){},
+      onTap: () {},
       child: Container(
         width: 180,
         padding: EdgeInsets.all(1),
@@ -99,38 +100,35 @@ class UProductCardVertical extends StatelessWidget {
                       ),
                     ],
                   ),
-
-                  /// Product Price and add button.
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      /// Product Price
-                      Text(
-                        '\$76',
-                        style: Theme.of(context).textTheme.headlineMedium,
-                        maxLines: 1,
-                        overflow: TextOverflow.ellipsis,
-                      ),
-
-                      /// Add button.
-                      Container(
-                        width: USizes.lg * 1.2,
-                        height: USizes.lg * 1.2,
-                        decoration: BoxDecoration(
-                          color: UColors.primary,
-                          borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(USizes.cardRadiusMd),
-                            bottomRight: Radius.circular(
-                              USizes.productImageRadius,
-                            ),
-                          ),
-                        ),
-                        child: Icon(Iconsax.add, color: UColors.white),
-                      ),
-                    ],
-                  ),
                 ],
               ),
+            ),
+            Spacer(),
+
+            /// Product Price and add button.
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                /// Product Price
+                Padding(
+                  padding: const EdgeInsets.only(left: USizes.sm),
+                  child: UProductPriceText(price: '20'),
+                ),
+
+                /// Add button.
+                Container(
+                  width: USizes.lg * 1.2,
+                  height: USizes.lg * 1.2,
+                  decoration: BoxDecoration(
+                    color: UColors.primary,
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(USizes.cardRadiusMd),
+                      bottomRight: Radius.circular(USizes.productImageRadius),
+                    ),
+                  ),
+                  child: Icon(Iconsax.add, color: UColors.white),
+                ),
+              ],
             ),
           ],
         ),
